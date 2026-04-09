@@ -1,14 +1,18 @@
-import type {Metadata} from 'next';
-import './globals.css'; // Global styles
+import type { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: 'My Google AI Studio App',
-  description: 'My Google AI Studio App',
+  title: "Dark App",
+  description: "Mysterious and immersive dark-themed family tree visualization",
 };
 
-export default function RootLayout({children}: {children: React.ReactNode}) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en">
+    <html lang="en" className="antialiased">
       <body suppressHydrationWarning>{children}</body>
     </html>
   );
