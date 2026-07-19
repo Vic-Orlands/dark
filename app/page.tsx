@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React, { useRef, useState, useEffect } from "react";
 import {
   motion,
@@ -9,6 +10,8 @@ import {
   AnimatePresence,
 } from "motion/react";
 import { Infinity } from "lucide-react";
+import Scribble from "@/components/scribble";
+import InteractiveRipple from "@/components/interactive-ripple";
 
 type NodeType = "person" | "marriage";
 
@@ -530,10 +533,6 @@ function PersonNode({
     </motion.div>
   );
 }
-
-import InteractiveRipple from "@/components/interactive-ripple";
-import Image from "next/image";
-import Scribble from "@/components/scribble";
 
 function Circled({ children }: { children: React.ReactNode }) {
   return (
